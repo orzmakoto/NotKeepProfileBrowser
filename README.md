@@ -31,7 +31,7 @@
 
 [NKPB_1.0.zip](https://github.com/orzmakoto/NotKeepProfileBrowser/raw/e447a71e938d3380a3fae6ed028122a76fd045ab/Binary/NKPB_1.0.zip)からZipファイルをダウンロード
 
-1. ダウンロードしたZipファイルを展開
+2. ダウンロードしたZipファイルを展開
 
 ![image](https://user-images.githubusercontent.com/12761202/198816313-bb13cba1-37f5-4db2-ba92-c771c92b8cbd.png)
 
