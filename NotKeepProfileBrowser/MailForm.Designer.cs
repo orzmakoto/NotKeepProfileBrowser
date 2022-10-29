@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MailForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Main = new System.Windows.Forms.TabPage();
             this.rtb_memo = new System.Windows.Forms.RichTextBox();
@@ -180,7 +181,7 @@
             this.contextMenu_tab.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripMenuItem_tab_閉じる});
             this.contextMenu_tab.Name = "contextMenu_tab";
-            this.contextMenu_tab.Size = new System.Drawing.Size(181, 48);
+            this.contextMenu_tab.Size = new System.Drawing.Size(105, 26);
             // 
             // ToolStripMenuItem_tab_閉じる
             // 
@@ -195,6 +196,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MailForm";
             this.Text = "NotKeepProfileBrowser";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
