@@ -33,7 +33,7 @@
 
 2. ダウンロードしたZipファイルを展開
 
-![image](https://user-images.githubusercontent.com/12761202/198816313-bb13cba1-37f5-4db2-ba92-c771c92b8cbd.png)
+![image](https://user-images.githubusercontent.com/12761202/198855145-cd9d511f-7634-499a-8449-58f9f3687e2f.png)
 
 3. 展開したフォルダに含まれる**NotKeepProfileBrowser.exe**を実行
 
