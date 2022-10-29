@@ -30,7 +30,7 @@ namespace NKPB
     {
         private static string GetBaseDirectory(ProfileType profileType)
         {
-            var path = "";
+            string path = null;
             if (profileType == ProfileType.Default)
             {
                 path = @".\profiles\default";
@@ -39,7 +39,7 @@ namespace NKPB
             {
                 path = @".\profiles\temporary";
             }
-            if (path == "")
+            if (path == null)
             {
                 throw new ArgumentException("");
             }
