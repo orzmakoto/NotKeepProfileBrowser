@@ -30,15 +30,23 @@ namespace NKPB
     {
         private static string GetBaseDirectory(ProfileType profileType)
         {
+            var path = "";
             if (profileType == ProfileType.Default)
             {
-                return @".\profiles\default";
+                path = @".\profiles\default";
             }
             else if (profileType == ProfileType.Temporary)
             {
-                return @".\profiles\temporary";
+                path = @".\profiles\temporary";
             }
-            throw new ArgumentException("");
+            if (path == "")
+            {
+                throw new ArgumentException("");
+            }
+
+            Directory.CreateDirectory(path);
+
+            return path;
         }
 
         private static string GetMemoFilePath()
@@ -53,7 +61,7 @@ namespace NKPB
         public static string LoadMemo()
         {
             var filePath = GetMemoFilePath();
-            if(File.Exists(filePath) == false)
+            if (File.Exists(filePath) == false)
             {
                 return string.Empty;
             }

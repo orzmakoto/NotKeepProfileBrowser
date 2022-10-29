@@ -18,3 +18,21 @@
   - [WebView2](https://developer.microsoft.com/ja-jp/microsoft-edge/webview2/#download-section)
 
 
+## 利用開始方法
+
+1. ビルド版のダウンロード
+
+(NKPB_1.0.zip)[https://github.com/orzmakoto/NotKeepProfileBrowser/raw/4c8919b274ca29941dc5a83f6a34c66794994aed/Binary/NKPB_1.0.zip]からZipファイルをダウンロード
+
+2. ダウンロードしたZipファイルを展開
+
+![image](https://user-images.githubusercontent.com/12761202/198816313-bb13cba1-37f5-4db2-ba92-c771c92b8cbd.png)
+
+展開したフォルダに含まれる**NotKeepProfileBrowser.exe**を実行
+
+## 主な機能
+
+1. タブごとに異なるユーザプロファイルを作成し終了時に廃棄
+2. タブごとに背景色の変更
+3. 任意の名前付きのユーザプロファイルを作成
+4. 自動保存可能されるメモ機能
