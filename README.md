@@ -29,7 +29,7 @@
 
 1. ビルド版のダウンロード
 
-[NKPB_1.0.zip](https://github.com/orzmakoto/NotKeepProfileBrowser/raw/e447a71e938d3380a3fae6ed028122a76fd045ab/Binary/NKPB_1.0.zip)からZipファイルをダウンロード
+[NKPB_1.0.zip](https://github.com/orzmakoto/NotKeepProfileBrowser/raw/master/Binary/NKPB_1.0.zip)からZipファイルをダウンロード
 
 2. ダウンロードしたZipファイルを展開
 
