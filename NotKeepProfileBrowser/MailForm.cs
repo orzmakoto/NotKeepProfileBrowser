@@ -15,15 +15,33 @@ namespace NKPB
         public MailForm()
         {
             InitializeComponent();
-
-            //AddNewTab();
         }
+
+        private void MailForm_Load(object sender, EventArgs e)
+        {
+            foreach (var profile in ProfileManager.GetProfiles(ProfileType.Default))
+            {
+                list_Names.Items.Add(profile);
+            }
+            rtb_memo.Text = ProfileManager.LoadMemo();
+        }
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ProfileManager.RemoveProfiles(ProfileType.Temporary);
+
+            ProfileManager.SaveMemo(rtb_memo.Text);
+        }
+
 
         private void tabControl1_DoubleClick(object sender, EventArgs e)
         {
             AddNewTab(ProfileType.Temporary);
         }
 
+        private void AddNewTab(ProfileType profileType, string name = "")
+        {
+            AddNewTab(ProfileManager.CreateNewProfile(profileType, name));
+        }
         private void AddNewTab(Profile profile)
         {
             var newTabContent = new BrowserControl(profile);
@@ -50,18 +68,6 @@ namespace NKPB
             newTabPage.UseVisualStyleBackColor = true;
 
             tabControl1.TabPages.Add(newTabPage);
-        }
-
-        private void AddNewTab(ProfileType profileType, string name = "")
-        {
-            AddNewTab(ProfileManager.CreateNewProfile(profileType, name));
-        }
-
-        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            ProfileManager.RemoveProfiles(ProfileType.Temporary);
-
-            ProfileManager.SaveMemo(rtb_memo.Text);
         }
 
         private void bt_OpenNewBrowser_Click(object sender, EventArgs e)
@@ -114,16 +120,6 @@ namespace NKPB
                 return;
             }
             AddNewTab(selectProfile as Profile);
-
-        }
-
-        private void MailForm_Load(object sender, EventArgs e)
-        {
-            foreach (var profile in ProfileManager.GetProfiles(ProfileType.Default))
-            {
-                list_Names.Items.Add(profile);
-            }
-            rtb_memo.Text = ProfileManager.LoadMemo();
         }
 
         private void list_Names_DoubleClick(object sender, EventArgs e)
